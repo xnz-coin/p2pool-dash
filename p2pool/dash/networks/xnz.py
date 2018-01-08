@@ -12,7 +12,7 @@ P2P_PORT = 6669
 ADDRESS_VERSION = 53
 SCRIPT_ADDRESS_VERSION = 16
 RPC_PORT = 6668
-RPC_CHECK = defer.inlineCallbacks(lambda dashd: defer.returnValue(
+RPC_CHECK = defer.inlineCallbacks(lambda xnzd: defer.returnValue(
             'dashaddress' in (yield xnzd.rpc_help()) and
             not (yield xnzd.rpc_getinfo())['testnet']
         ))
