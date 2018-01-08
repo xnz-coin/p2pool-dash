@@ -13,7 +13,7 @@ ADDRESS_VERSION = 53
 SCRIPT_ADDRESS_VERSION = 16
 RPC_PORT = 6668
 RPC_CHECK = defer.inlineCallbacks(lambda xnzd: defer.returnValue(
-            'dashaddress' in (yield xnzd.rpc_help()) and
+            'address' in (yield xnzd.rpc_help()) and
             not (yield xnzd.rpc_getinfo())['testnet']
         ))
 BLOCKHASH_FUNC = lambda data: pack.IntType(256).unpack(__import__('dash_hash').getPoWHash(data))
